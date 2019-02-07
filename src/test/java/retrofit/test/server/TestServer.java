@@ -16,7 +16,7 @@ public class TestServer {
 	public void setUp() {
 		retrofit = new Retrofit.Builder()
 		        .baseUrl(server.url("/"))
-		         .addConverterFactory(new RetrofitGetFactory())
+		        .addConverterFactory(new RetrofitGetFactory())
 		        .build();
 	}
 }
