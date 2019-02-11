@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Rule;
 
 import okhttp3.mockwebserver.MockWebServer;
+import retrofit.helpers.ToStringConverterFactory;
 import retrofit.test.factory.RetrofitGetFactory;
 import retrofit2.Retrofit;
 
@@ -12,11 +13,10 @@ public class TestServer {
 	
 	public Retrofit retrofit;
 	
-	@Before
-	public void setUp() {
-		retrofit = new Retrofit.Builder()
-		        .baseUrl(server.url("/"))
-		        .addConverterFactory(new RetrofitGetFactory())
-		        .build();
+	public Retrofit toStringConverterFactorySetUp() {
+		return new Retrofit.Builder()
+				.baseUrl(server.url("/"))
+				.addConverterFactory(new ToStringConverterFactory())
+				.build();
 	}
 }
