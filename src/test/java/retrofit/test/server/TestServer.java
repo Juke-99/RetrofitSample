@@ -1,11 +1,9 @@
 package retrofit.test.server;
 
-import org.junit.Before;
 import org.junit.Rule;
 
 import okhttp3.mockwebserver.MockWebServer;
 import retrofit.helpers.ToStringConverterFactory;
-import retrofit.test.factory.RetrofitGetFactory;
 import retrofit2.Retrofit;
 
 public class TestServer {
